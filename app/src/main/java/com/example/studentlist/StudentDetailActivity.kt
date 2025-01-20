@@ -2,7 +2,6 @@ package com.example.studentlist
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
@@ -48,15 +47,10 @@ class StudentDetailActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
-        Log.d("ON-RESUME-TAG", "here")
-        Log.d("ON-RESUME-TAG", studentUuid.toString())
-
         super.onResume()
         val student = Model.shared.getStudentByUuid(studentUuid)
 
         if(student != null) {
-            Log.d("ON-RESUME-TAG", "student is not null")
-            Log.d("ON-RESUME-TAG", student.toString())
             setUserDetails(student)
         }
 

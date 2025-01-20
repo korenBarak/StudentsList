@@ -1,6 +1,4 @@
 package com.example.studentlist.model
-
-import android.util.Log
 import com.example.studentlist.R
 
 class Model private constructor() {
