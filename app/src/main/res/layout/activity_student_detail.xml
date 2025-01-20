@@ -1,58 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/studentDetailPicture"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:scaleType="centerCrop"
-        android:src="@drawable/user_image"/>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
 
-    <TextView
-        android:id="@+id/studentDetailName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Student Name"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:paddingTop="8dp" />
 
-    <TextView
-        android:id="@+id/studentDetailId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Student ID"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:paddingTop="4dp" />
-    <TextView
-        android:id="@+id/studentDetailPhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Student phone number"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:paddingTop="4dp" />
-    <TextView
-        android:id="@+id/studentDetailAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Student address"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:paddingTop="4dp" />
+        <ImageView
+            android:id="@+id/studentDetailPicture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_image" />
 
-    <CheckBox
-        android:id="@+id/studentCheck"
-        android:text="checked"
-        android:gravity="center"
-        android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/studentDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="Student Name"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/studentDetailId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="Student ID"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/studentDetailPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="Student phone number"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/studentDetailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="Student address"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/studentCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="checked" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/studentDetailEditButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
-</LinearLayout>
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
