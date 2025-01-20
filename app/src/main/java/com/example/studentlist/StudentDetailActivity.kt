@@ -20,7 +20,6 @@ class StudentDetailActivity : AppCompatActivity() {
         studentUuid = intent.getIntExtra("student_uuid", -1)
 
         if (studentUuid == -1) {
-            // Handle the error if the student ID is not passed
             Toast.makeText(this, "Student ID not found", Toast.LENGTH_SHORT).show()
             finish()
             return
@@ -30,14 +29,10 @@ class StudentDetailActivity : AppCompatActivity() {
         val student = Model.shared.getStudentByUuid(studentUuid)
 
         if (student == null) {
-            // Handle the error if the student is not found
             Toast.makeText(this, "Student not found", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
-
-        // Set student details to the views
-//        setUserDetails(student)
 
         findViewById<Button>(R.id.studentDetailEditButton).setOnClickListener {
             val intent = Intent(this, EditStudentActivity::class.java)
